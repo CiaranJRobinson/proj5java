@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.*;
 
-public class Balanced{
+public class Balanced {
     public static void main(String[] args) {
 
         String inputStr;
