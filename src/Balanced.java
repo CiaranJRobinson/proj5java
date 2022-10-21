@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.*;
 
 public class Balanced {
-    public static void main(String[] args) {
+    public boolean balanced(String string) {
 
         String inputStr;
         int count = 0;
@@ -30,7 +30,7 @@ public class Balanced {
                 ch = stack[j];
             if(stack.length == 0 || ch != '(') {
                 System.out.println("\nUnbalanced Parentheses!");
-                return;
+                return false;
             }
         } else if(current == '}') {
             if(count == 1)
@@ -38,7 +38,7 @@ public class Balanced {
                 ch = stack[j];
             if(stack.length == 0 || ch != '{') {
                 System.out.println("\nUnbalanced Parentheses!");
-                return;
+                return false;
             }
         } else if(current == ']') {
             if(count == 1)
@@ -46,10 +46,10 @@ public class Balanced {
                 ch = stack[j];
             if(stack.length == 0 || ch != '[') {
                 System.out.println("\nUnbalanced Parentheses!");
-                return;
+                return false;
             }
         }
     }
         System.out.println("\nBalanced Parentheses.");
-}
+return true;}
 }
